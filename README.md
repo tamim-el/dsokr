@@ -2,6 +2,8 @@
 
 This Python package contains code to use kernel-induced losses with neural networks for Structured Prediction.
 
+<img src="Figures/DSOKR_scheme.png" width="400"/>
+
 ## Environment Preparation
 ```bash
 conda create -n dsokr python=3.8
@@ -27,12 +29,12 @@ python create_smi2mol.py
 The resulting data files can be found in the `Data/smi2mol` directory.
 
 ### 2) Sketching size selection with *Perfect h*
-In order to select the sketching size with the *Perfect h* strategy described in our paper, you can run the following line:
+To select the sketching size with the *Perfect h* strategy described in our paper, you can run the following line:
 ```bash
 python s2m_dsokr_perfect_h.py --random_seed_split 1996
 ```
 When the experiment ends, you obtain the following figure, which provides a clue about the sketching size to choose:
-
+![](Figures/hperfect_s2m.png)
 
 
 ### 3) Training and testing
@@ -47,3 +49,13 @@ Test mean edit distance w/o edge feature: 1.9905
 ```
 
 ## Experiment: SMI2Mol
+### 1) Dataset
+First you need to obtain the three data files `training.txt`, `val.txt` and `text.txt` from the following link: https://github.com/cnedwards/text2mol/tree/master/data. Put all these files into the directory `Data/chebi-20`. Run the following script to pre-processing data:
+```bash
+python create_ChEBI-20.py
+```
+
+### 2) Sketching size selection with *Perfect h*
+
+### 3) Training and testing
+Run the following script to train the `dsokr` model and get the performance on the test set:
