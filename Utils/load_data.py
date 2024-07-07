@@ -172,39 +172,31 @@ def load_text2mols(path='Data/chebi-20/'):
     Returns
     -------
     X_tr : 1-D array-like of size (n_tr).
-    Y_grkl_tr : 1-D array-like of size (n_tr).
-        Training outputs as Graph instances.
     Y_dict_tr : list.
         Training outputs as dictionaries.
     X_val : 1-D array-like of size (n_val).
-    Y_grkl_val : 1-D array-like of size (n_val).
-        Validation outputs as Graph instances.
     Y_dict_val : list.
         Validation outputs as dictionaries.
     X_te : 1-D array-like of size (n_te).
-    Y_grkl_te : 1-D array-like of size (n_te).
-        Test outputs as Graph instances.
     Y_dict_te : list.
         Test outputs as dictionaries.
-    Y_grkl_cand : 1-D array-like of size (n_cand).
-       Graph candidate cinstances.
     Y_dict_cand : list.
        Graph candidate as dictionaries.
     """
     X_tr = np.load(path + 'X_train.npy', allow_pickle=True)
     Y_dict_tr  = np.load(path + 'y_train.npy', allow_pickle=True)
-    Y_gkl_tr = to_grakels(Y_dict_tr, do_edge_labels=True)
+    # Y_gkl_tr = to_grakels(Y_dict_tr, do_edge_labels=True)
     
     X_val = np.load(path + 'X_valid.npy', allow_pickle=True)
     Y_dict_val =  np.load(path + 'y_valid.npy', allow_pickle=True)
-    Y_gkl_val = to_grakels(Y_dict_val, do_edge_labels=True)
+    # Y_gkl_val = to_grakels(Y_dict_val, do_edge_labels=True)
     
     X_te = np.load(path + 'X_test.npy', allow_pickle=True)
     Y_dict_te = np.load(path + 'y_test.npy', allow_pickle=True)
-    Y_gkl_te = to_grakels(Y_dict_te, do_edge_labels=True)
+    # Y_gkl_te = to_grakels(Y_dict_te, do_edge_labels=True)
 
     Y_dict_cand = np.load(path + 'y_cand.npy', allow_pickle=True)
-    Y_gkl_cand = to_grakels(Y_dict_cand, do_edge_labels=True)
+    # Y_gkl_cand = to_grakels(Y_dict_cand, do_edge_labels=True)
 
     
-    return X_tr, Y_gkl_tr, Y_dict_tr, X_val, Y_gkl_val, Y_dict_val, X_te, Y_gkl_te, Y_dict_te, Y_gkl_cand, Y_dict_cand
+    return X_tr, Y_dict_tr, X_val, Y_dict_val, X_te, Y_dict_te, Y_dict_cand

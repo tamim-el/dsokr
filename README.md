@@ -48,14 +48,28 @@ Test mean edit distance: 2.9375
 Test mean edit distance w/o edge feature: 1.9905
 ```
 
-## Experiment: SMI2Mol
+## Experiment: ChEBI-20
 ### 1) Dataset
-First you need to obtain the three data files `training.txt`, `val.txt` and `text.txt` from the following link: https://github.com/cnedwards/text2mol/tree/master/data. Put all these files into the directory `Data/chebi-20`. Run the following script to pre-processing data:
+First you need to obtain the three data files `training.txt`, `val.txt` and `text.txt` from the following link: https://github.com/cnedwards/text2mol/tree/master/data. Put all these files into the directory `Data/chebi-20/`. Run the following script to pre-processing data:
 ```bash
 python create_ChEBI-20.py
 ```
 
 ### 2) Sketching size selection with *Perfect h*
+To select the sketching size with the *Perfect h* strategy described in our paper, you can run the following script:
+```bash
+python chebi20_dsokr_perfect_h.py --save_dir "exper/chebi_20/" 
+```
+You will get Figure 5 in our papaer.
 
 ### 3) Training and testing
 Run the following script to train the `dsokr` model and get the performance on the test set:
+```bash
+python chebi20_dsokr.py --my 100 --output_sketch_name "SubSample" --output_kernel 'cosine' --save_dir "exper/chebi_20/" --random_seed 42
+```
+Normally, you can get the results like this (the results and the checkpoints can be found in the save directory):
+```
+Test mrr: 0.6226708200763317
+Test top1: 0.48106634353226296
+Test top10: 0.868524689488034
+```
