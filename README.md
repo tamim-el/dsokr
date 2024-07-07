@@ -50,7 +50,11 @@ Test mean edit distance w/o edge feature: 1.9905
 
 ## Experiment: ChEBI-20
 ### 1) Dataset
-First you need to obtain the three data files `training.txt`, `val.txt` and `text.txt` from the following link: https://github.com/cnedwards/text2mol/tree/master/data. Put all these files into the directory `Data/chebi-20/`. Run the following script to pre-processing data:
+Create the data directory:
+```bash
+mkdir Data/chebi-20/
+```
+Then you need to obtain the three data files `training.txt`, `val.txt` and `text.txt` from the following link: https://github.com/cnedwards/text2mol/tree/master/data. Put all these files into the directory `Data/chebi-20/`. Run the following script to pre-process data:
 ```bash
 python create_ChEBI-20.py
 ```
@@ -73,3 +77,6 @@ Test mrr: 0.6226708200763317
 Test top1: 0.48106634353226296
 Test top10: 0.868524689488034
 ```
+
+### 4) Ensemble
+Repeat step 3) with different hyper-parameters, such as the output sketcher, random seed or even the output kernel type.
