@@ -64,7 +64,7 @@ To select the sketching size with the *Perfect h* strategy described in our pape
 ```bash
 python chebi20_dsokr_perfect_h.py --save_dir "exper/chebi_20/" 
 ```
-You will get Figure 5 in our papaer.
+You will get Figure 5 in our paper.
 
 ### 3) Training and testing
 Run the following script to train the `dsokr` model and get the performance on the test set:
@@ -80,3 +80,18 @@ Test top10: 0.868524689488034
 
 ### 4) Ensemble
 Repeat step 3) with different hyper-parameters, such as the output sketcher, random seed or even the output kernel type.
+
+## Cite
+
+If you use this code, please cite the corresponding work:
+
+```bibtex
+@misc{elahmad2024deep,
+      title={Deep Sketched Output Kernel Regression for Structured Prediction}, 
+      author={Tamim {El Ahmad} and Junjie Yang and Pierre Laforgue and Florence d'Alché-Buc},
+      year={2024},
+      eprint={2406.09253},
+      archivePrefix={arXiv},
+      primaryClass={id='stat.ML' full_name='Machine Learning' is_active=True alt_name=None in_archive='stat' is_general=False description='Covers machine learning papers (supervised, unsupervised, semi-supervised learning, graphical models, reinforcement learning, bandits, high dimensional inference, etc.) with a statistical or theoretical grounding'}
+}
+```
