@@ -1,5 +1,7 @@
 # Deep Sketched Output Kernel Regression for Structured Prediction
 
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/deep-sketched-output-kernel-regression-for/cross-modal-retrieval-on-chebi-20)](https://paperswithcode.com/sota/cross-modal-retrieval-on-chebi-20?p=deep-sketched-output-kernel-regression-for)
+
 This Python package contains code to use kernel-induced losses with neural networks for Structured Prediction.
 
 <img src="Figures/DSOKR_scheme.png" width="400"/>
