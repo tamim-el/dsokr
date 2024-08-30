@@ -100,3 +100,5 @@ If you use this code, please cite the corresponding work:
       primaryClass={id='stat.ML' full_name='Machine Learning' is_active=True alt_name=None in_archive='stat' is_general=False description='Covers machine learning papers (supervised, unsupervised, semi-supervised learning, graphical models, reinforcement learning, bandits, high dimensional inference, etc.) with a statistical or theoretical grounding'}
 }
 ```
+
+![Poster](https://github.com/tamim-el/dsokr/blob/main/Figures/Poster.png?raw=true)
