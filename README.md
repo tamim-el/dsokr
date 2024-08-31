@@ -91,13 +91,25 @@ Funded by the European Union. Views and opinions expressed are however those of 
 If you use this code, please cite the corresponding work:
 
 ```bibtex
-@misc{elahmad2024deep,
-      title={Deep Sketched Output Kernel Regression for Structured Prediction}, 
-      author={Tamim {El Ahmad} and Junjie Yang and Pierre Laforgue and Florence d'Alché-Buc},
-      year={2024},
-      eprint={2406.09253},
-      archivePrefix={arXiv},
-      primaryClass={id='stat.ML' full_name='Machine Learning' is_active=True alt_name=None in_archive='stat' is_general=False description='Covers machine learning papers (supervised, unsupervised, semi-supervised learning, graphical models, reinforcement learning, bandits, high dimensional inference, etc.) with a statistical or theoretical grounding'}
+@InProceedings{elahmad2024deep,
+author="El Ahmad, Tamim
+and Yang, Junjie
+and Laforgue, Pierre
+and d'Alch{\'e}-Buc, Florence",
+editor="Bifet, Albert
+and Davis, Jesse
+and Krilavi{\v{c}}ius, Tomas
+and Kull, Meelis
+and Ntoutsi, Eirini
+and {\v{Z}}liobait{\.{e}}, Indr{\.{e}}",
+title="Deep Sketched Output Kernel Regression for Structured Prediction",
+booktitle="Machine Learning and Knowledge Discovery in Databases. Research Track",
+year="2024",
+publisher="Springer Nature Switzerland",
+address="Cham",
+pages="93--110",
+abstract="By leveraging the kernel trick in the output space, kernel-induced losses provide a principled way to define structured output prediction tasks for a wide variety of output modalities. In particular, they have been successfully used in the context of surrogate non-parametric regression, where the kernel trick is typically exploited in the input space as well. However, when inputs are images or texts, more expressive models such as deep neural networks seem more suited than non-parametric methods. In this work, we tackle the question of how to train neural networks to solve structured output prediction tasks, while still benefiting from the versatility and relevance of kernel-induced losses. We design a novel family of deep neural architectures, whose last layer predicts in a data-dependent finite-dimensional subspace of the infinite-dimensional output feature space deriving from the kernel-induced loss. This subspace is chosen as the span of the eigenfunctions of a randomly-approximated version of the empirical kernel covariance operator. Interestingly, this approach unlocks the use of gradient descent algorithms (and consequently of any neural architecture) for structured prediction. Experiments on synthetic tasks as well as real-world supervised graph prediction problems show the relevance of our method.",
+isbn="978-3-031-70352-2"
 }
 ```
 
